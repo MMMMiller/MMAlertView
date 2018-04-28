@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [MMAlertView showAlertViewWithMessage:@"成功！"];
+    
 }
 
 

@@ -9,20 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "MMAlertViewMacro.h"
 
-@interface MMAlertAction : NSObject
-
-+ (instancetype)actionWithTitle:(NSString *)title style:(UIAlertActionStyle)style handler:(void (^)(UIAlertAction *action))handler;
-
-@property (nonatomic, readonly) NSString *title;
-@property (nonatomic, readonly) UIAlertActionStyle style;
-@property (nonatomic, getter=isEnabled) BOOL enabled;
-
-@end
-
 @interface MMAlertView : UIView
 
-- (instancetype)initWithAlertViewWithStyle:(MMAlertViewStyle)alertViewStyle;
+@property (strong, nonatomic, readonly) UILabel *detailsLabel;
+@property (strong, nonatomic, nullable) UIColor *contentColor;
+@property (strong, nonatomic, readonly) UIView *backgroundView;
 
-@property (nonatomic, readonly) NSArray<MMAlertAction *> *actions;
+
+- (instancetype)initWithView:(UIView *)view
+                       style:(MMAlertViewStyle)style;
+- (void)show;
+- (void)hide;
 
 @end

@@ -10,18 +10,23 @@
 
 @implementation MMAlertView (MMAdd)
 
-+ (MMAlertView *)showAlertViewWithMessage:(NSString *)message
++ (MMAlertView *)showAlertMessage:(NSString *)message
+                           toView:(UIView *)view
 {
-    MMAlertView *alerView = [[MMAlertView alloc] initWithAlertViewWithStyle:MMAlertViewStyleText];
+    if (!view) {
+        return nil;
+    }
+    MMAlertView *alertView = [[MMAlertView alloc] initWithView:view
+                                                         style:MMAlertViewStyleText];
     
-    return alerView;
+    [view addSubview:alertView];
+    alertView.detailsLabel.text = message;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^ {
+                       [alertView hide];
+                   });
+    
+    [alertView show];
+    return alertView;
 }
 
-+ (MMAlertView *)showAlertViewWithState:(MMAlertViewState)state
-                                   desc:(NSString *)desc
-{
-    MMAlertView *alerView = [[MMAlertView alloc] initWithAlertViewWithStyle:MMAlertViewStyleTextAndState];
-    
-    return alerView;
-}
 @end

@@ -10,10 +10,8 @@
 
 @interface MMAlertView (MMAdd)
 
-// 纯文字提示弹框
-+ (MMAlertView *)showAlertViewWithMessage:(NSString *)message;
+/** 显示一个1.5s后自动消失的HUD*/
++ (MMAlertView *)showAlertMessage:(NSString *)message
+                           toView:(UIView *)view;
 
-// 文字+状态图提示弹框
-+ (MMAlertView *)showAlertViewWithState:(MMAlertViewState)state
-                                   desc:(NSString *)desc;
 @end

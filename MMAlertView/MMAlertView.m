@@ -7,52 +7,68 @@
 //
 
 #import "MMAlertView.h"
-#import "MMAlerLabel.h"
 
-@implementation MMAlertAction
+@interface MMAlertView()
 
-+ (instancetype)actionWithTitle:(NSString *)title
-                          style:(UIAlertActionStyle)style
-                        handler:(void (^)(UIAlertAction *))handler
-{
-    return MMAlertAction.new;
-}
+@property (nonatomic, copy) NSString *alertMessage;
 
 @end
 
 @implementation MMAlertView
 
-- (instancetype)initWithAlertViewWithStyle:(MMAlertViewStyle)alertViewStyle
+- (instancetype)initWithView:(UIView *)view style:(MMAlertViewStyle)style
 {
-    MMAlertView *alertView = [MMAlertView new];
-    switch (alertViewStyle) {
-        case MMAlertViewStyleText: {
-            
-        }
-            break;
-            
-        case MMAlertViewStyleTextAndState: {
-            
-        }
-            break;
-            
-        case MMAlertViewStyleSingleButton: {
-            
-        }
-            break;
-            
-        case MMAlertViewStyleSheet: {
-            
-        }
-            break;
-            
-        default: {
-            return nil;
-        }
-            break;
+    if ((self = [super initWithFrame:view.bounds])) {
+        [self configWithStyle:style];
     }
-    return alertView;
+    return self;
 }
 
+- (void)configWithStyle:(MMAlertViewStyle)style
+{
+    switch (style) {
+        case MMAlertViewStyleText: {
+            [self configTextView];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 
+- (void)configTextView {
+    _contentColor = [UIColor colorWithWhite:0.f alpha:0.7f];
+    self.opaque = NO;
+    self.backgroundColor = [UIColor clearColor];
+    self.alpha = 0.0f;
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.layer.allowsGroupOpacity = NO;
+    
+    UIView *backgroundView = [[UIView alloc] initWithFrame:self.bounds];
+    backgroundView.backgroundColor = [UIColor clearColor];
+    backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    backgroundView.alpha = 0.f;
+    [self addSubview:backgroundView];
+    _backgroundView = backgroundView;
+    
+    UILabel *detailsLabel = [UILabel new];
+    detailsLabel.adjustsFontSizeToFitWidth = NO;
+    detailsLabel.textAlignment = NSTextAlignmentCenter;
+    detailsLabel.textColor = _contentColor;
+    detailsLabel.numberOfLines = 0;
+    detailsLabel.font = [UIFont boldSystemFontOfSize:13.0f];
+    detailsLabel.opaque = NO;
+    detailsLabel.backgroundColor = [UIColor clearColor];
+    [self addSubview:detailsLabel];
+    _detailsLabel = detailsLabel;
+}
+
+- (void)hide {
+    
+}
+
+- (void)show {
+    
+}
 @end
