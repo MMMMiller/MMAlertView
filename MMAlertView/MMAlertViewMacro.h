@@ -17,11 +17,10 @@ typedef NS_ENUM(NSInteger, MMAlertViewStyle)
     MMAlertViewStyleSheet,
 };
 
-typedef NS_ENUM(NSInteger, MMAlertViewState)
+typedef NS_ENUM(NSInteger, MMAlertViewAnimationTyle)
 {
-    MMAlertViewStateSuccess,
-    MMAlertViewStateError,
-    MMAlertViewStateNotice,
+    MMAlertViewAnimationTyleFade,
+    MMAlertViewAnimationTyleDropDown,
 };
 
 #endif /* MMAlertViewMacro_h */

@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "HUDViewController.h"
 #import "MMAlertView+MMAdd.h"
+
 @interface ViewController ()
 
 @end
@@ -16,14 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [MMAlertView showAlertMessage:@"没问题！" toView:self.view];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.navigationController pushViewController:[HUDViewController new] animated:YES];
 }
-
 
 @end

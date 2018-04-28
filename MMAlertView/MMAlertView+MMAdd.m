@@ -22,10 +22,11 @@
     [view addSubview:alertView];
     alertView.detailsLabel.text = message;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^ {
-                       [alertView hide];
-                   });
+        //[alertView hide];
+    });
     
     [alertView show];
+    [view bringSubviewToFront:alertView];
     return alertView;
 }
 

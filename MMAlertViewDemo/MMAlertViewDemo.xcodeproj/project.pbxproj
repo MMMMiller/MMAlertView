@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D794E55D07FC5455DCE2887C /* libPods-MMAlertViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 828AFF908D7779A76896C590 /* libPods-MMAlertViewDemo.a */; };
 		E05E50D2205113A100879714 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E50D1205113A100879714 /* AppDelegate.m */; };
 		E05E50D5205113A100879714 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E50D4205113A100879714 /* ViewController.m */; };
 		E05E50D8205113A100879714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05E50D6205113A100879714 /* Main.storyboard */; };
@@ -15,9 +16,13 @@
 		E05E50E0205113A100879714 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E50DF205113A100879714 /* main.m */; };
 		E05E50E9205113C600879714 /* MMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E50E8205113C600879714 /* MMAlertView.m */; };
 		E05E51122051231700879714 /* MMAlertView+MMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E51112051231700879714 /* MMAlertView+MMAdd.m */; };
+		E0EB072520947C0B008992B3 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0EB072420947C0B008992B3 /* HUDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55752257C0EDDF9C298E72E4 /* Pods-MMAlertViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMAlertViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MMAlertViewDemo/Pods-MMAlertViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6F50EEB0F9523FEF3A577C2C /* Pods-MMAlertViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMAlertViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MMAlertViewDemo/Pods-MMAlertViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		828AFF908D7779A76896C590 /* libPods-MMAlertViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMAlertViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05E50CD205113A100879714 /* MMAlertViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMAlertViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05E50D0205113A100879714 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E05E50D1205113A100879714 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,6 +38,8 @@
 		E05E51102051231700879714 /* MMAlertView+MMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMAlertView+MMAdd.h"; sourceTree = "<group>"; };
 		E05E51112051231700879714 /* MMAlertView+MMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MMAlertView+MMAdd.m"; sourceTree = "<group>"; };
 		E05E5113205145DB00879714 /* MMAlertViewMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAlertViewMacro.h; sourceTree = "<group>"; };
+		E0EB072320947C0B008992B3 /* HUDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
+		E0EB072420947C0B008992B3 /* HUDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,18 +47,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D794E55D07FC5455DCE2887C /* libPods-MMAlertViewDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D146095B2784F504DEC1E1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F50EEB0F9523FEF3A577C2C /* Pods-MMAlertViewDemo.debug.xcconfig */,
+				55752257C0EDDF9C298E72E4 /* Pods-MMAlertViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E05E50C4205113A100879714 = {
 			isa = PBXGroup;
 			children = (
 				E05E50E6205113B900879714 /* MMAlertView */,
 				E05E50CF205113A100879714 /* MMAlertViewDemo */,
 				E05E50CE205113A100879714 /* Products */,
+				4D146095B2784F504DEC1E1A /* Pods */,
+				FC30C088542A906DD14C8E1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +89,8 @@
 				E05E50D1205113A100879714 /* AppDelegate.m */,
 				E05E50D3205113A100879714 /* ViewController.h */,
 				E05E50D4205113A100879714 /* ViewController.m */,
+				E0EB072320947C0B008992B3 /* HUDViewController.h */,
+				E0EB072420947C0B008992B3 /* HUDViewController.m */,
 				E05E50D6205113A100879714 /* Main.storyboard */,
 				E05E50D9205113A100879714 /* Assets.xcassets */,
 				E05E50DB205113A100879714 /* LaunchScreen.storyboard */,
@@ -92,6 +113,14 @@
 			path = ../MMAlertView;
 			sourceTree = "<group>";
 		};
+		FC30C088542A906DD14C8E1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				828AFF908D7779A76896C590 /* libPods-MMAlertViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,6 +128,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E05E50E3205113A100879714 /* Build configuration list for PBXNativeTarget "MMAlertViewDemo" */;
 			buildPhases = (
+				8615E592DA725EF1D7B70597 /* [CP] Check Pods Manifest.lock */,
 				E05E50C9205113A100879714 /* Sources */,
 				E05E50CA205113A100879714 /* Frameworks */,
 				E05E50CB205113A100879714 /* Resources */,
@@ -158,11 +188,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8615E592DA725EF1D7B70597 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MMAlertViewDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E05E50C9205113A100879714 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0EB072520947C0B008992B3 /* HUDViewController.m in Sources */,
 				E05E51122051231700879714 /* MMAlertView+MMAdd.m in Sources */,
 				E05E50D5205113A100879714 /* ViewController.m in Sources */,
 				E05E50E9205113C600879714 /* MMAlertView.m in Sources */,
@@ -299,6 +351,7 @@
 		};
 		E05E50E4205113A100879714 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F50EEB0F9523FEF3A577C2C /* Pods-MMAlertViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,6 +366,7 @@
 		};
 		E05E50E5205113A100879714 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55752257C0EDDF9C298E72E4 /* Pods-MMAlertViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
