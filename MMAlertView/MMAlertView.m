@@ -27,22 +27,22 @@
     MMAlertView *alertView = [MMAlertView new];
     switch (alertViewStyle) {
         case MMAlertViewStyleText: {
-            [self configTextAlertView:alertView];
+            
         }
             break;
             
         case MMAlertViewStyleTextAndState: {
-            [self configTextAndStateAlertView:alertView];
+            
         }
             break;
             
         case MMAlertViewStyleSingleButton: {
-            [self configSingleButtonAlertView:alertView];
+            
         }
             break;
             
         case MMAlertViewStyleSheet: {
-            [self configSheetAlertView:alertView];
+            
         }
             break;
             
@@ -54,20 +54,5 @@
     return alertView;
 }
 
-- (void)configTextAlertView:(MMAlertView *)alertView {
-    
-}
-
-- (void)configTextAndStateAlertView:(MMAlertView *)alertView {
-    
-}
-
-- (void)configSingleButtonAlertView:(MMAlertView *)alertView {
-    
-}
-
-- (void)configSheetAlertView:(MMAlertView *)alertView {
-    
-}
 
 @end

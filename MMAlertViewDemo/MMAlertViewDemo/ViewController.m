@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "MMAlertView+MMAdd.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [MMAlertView showAlertViewWithMessage:@"成功！"];
 }
 
 

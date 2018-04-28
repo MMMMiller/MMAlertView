@@ -15,7 +15,6 @@
 		E05E50E0205113A100879714 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E50DF205113A100879714 /* main.m */; };
 		E05E50E9205113C600879714 /* MMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E50E8205113C600879714 /* MMAlertView.m */; };
 		E05E51122051231700879714 /* MMAlertView+MMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E51112051231700879714 /* MMAlertView+MMAdd.m */; };
-		E05E511620523DED00879714 /* MMAlerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E511520523DED00879714 /* MMAlerLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +33,6 @@
 		E05E51102051231700879714 /* MMAlertView+MMAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMAlertView+MMAdd.h"; sourceTree = "<group>"; };
 		E05E51112051231700879714 /* MMAlertView+MMAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MMAlertView+MMAdd.m"; sourceTree = "<group>"; };
 		E05E5113205145DB00879714 /* MMAlertViewMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAlertViewMacro.h; sourceTree = "<group>"; };
-		E05E511420523DED00879714 /* MMAlerLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAlerLabel.h; sourceTree = "<group>"; };
-		E05E511520523DED00879714 /* MMAlerLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMAlerLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +87,6 @@
 				E05E5113205145DB00879714 /* MMAlertViewMacro.h */,
 				E05E51102051231700879714 /* MMAlertView+MMAdd.h */,
 				E05E51112051231700879714 /* MMAlertView+MMAdd.m */,
-				E05E511420523DED00879714 /* MMAlerLabel.h */,
-				E05E511520523DED00879714 /* MMAlerLabel.m */,
 			);
 			name = MMAlertView;
 			path = ../MMAlertView;
@@ -172,7 +167,6 @@
 				E05E50D5205113A100879714 /* ViewController.m in Sources */,
 				E05E50E9205113C600879714 /* MMAlertView.m in Sources */,
 				E05E50E0205113A100879714 /* main.m in Sources */,
-				E05E511620523DED00879714 /* MMAlerLabel.m in Sources */,
 				E05E50D2205113A100879714 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
